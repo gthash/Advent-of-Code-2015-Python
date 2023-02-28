@@ -1,3 +1,4 @@
+
 def main():
     count = 0
     with open("input.txt") as file:
