@@ -1,3 +1,4 @@
+
 def main():
     count, index = 0, 0
     with open("input.txt") as file:
@@ -11,3 +12,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
