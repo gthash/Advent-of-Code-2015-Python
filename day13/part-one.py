@@ -19,19 +19,16 @@ def main():
             weights[(data_list[0], data_list[1])] = int(data_list[2])
 
     count, optimal_count = 0, 0
- 
-    for arrang in list(permutations(names)):
-        arrangement_list = [(arrang[i], arrang[i + 1]) for i in range(0, 7)] + \
-                              [(arrang[i + 1], arrang[i]) for i in range(0, 7)] + \
-                              [(arrang[7], arrang[0]), (arrang[0], arrang[7])]
-        for content in arrangement_list:
-            count = sum(map(weights.get, filter(lambda x: x != content \
-                                and x != content[::-1], arrangement_list)))
-            if count >= optimal_count:
-                optimal_count = count
+
+    for arrang in permutations(names):
+        arrangement_list = [(arrang[i], arrang[i+1]) for i in range(0,7)] + \
+                [(arrang[i+1], arrang[i]) for i in range(0,7)] + \
+                [(arrang[7], arrang[0]), (arrang[0], arrang[7])]
+        count = sum(map(weights.get, arrangement_list))    
+        if count >= optimal_count:
+            optimal_count = count
 
     print(optimal_count)
 
 if __name__ == "__main__":
     main()
-    
