@@ -21,9 +21,9 @@ def main():
     count, optimal_count = 0, 0
  
     for arrang in list(permutations(names)):
-        arrangement_list = [(arrang[i], arrang[i+1]) for i in range(0,7)] + \
-                        [(arrang[i+1], arrang[i]) for i in range(0,7)] + \
-                        [(arrang[7], arrang[0]), (arrang[0], arrang[7])]
+        arrangement_list = [(arrang[i], arrang[i + 1]) for i in range(0, 7)] + \
+                                [(arrang[i + 1], arrang[i]) for i in range(0, 7)] + \
+                                [(arrang[7], arrang[0]), (arrang[0], arrang[7])]
         for content in arrangement_list:
             count = sum(map(weights.get, filter(lambda x: x != content \
                                 and x != content[::-1], arrangement_list)))
@@ -34,3 +34,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+    
