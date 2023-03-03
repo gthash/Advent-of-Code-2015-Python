@@ -1,3 +1,4 @@
+
 import re
 
 def reindeer_distance(speed, flying, rest):
@@ -22,3 +23,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
