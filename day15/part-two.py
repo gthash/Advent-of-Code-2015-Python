@@ -15,7 +15,7 @@ def main():
 
     for elements in possibilities:
         score, result = 1, 0
-        if np.multiply(elements, properties[4]).sum() == 500:
+        if sum(np.multiply(elements, properties[4])) == 500:
             for i in range(0, 4):
                 result = np.multiply(elements, properties[i]).sum()
                 if result < 0:
@@ -28,4 +28,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
     
