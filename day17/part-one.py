@@ -5,7 +5,6 @@ def main():
     max_elem = int('11111111111111111111', 2)
     containers = np.array([33, 14, 18, 20, 45, 35, 16, 35, 1, 13, 18,
                            13, 50, 44, 48, 6, 24, 41, 30, 42 ])
-    
     count = 0
 
     for i in range(0, max_elem + 1):
