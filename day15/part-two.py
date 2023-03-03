@@ -2,9 +2,10 @@
 import numpy as np
 
 def main():
-    possibilities = [(i, j, k, 100 - i - j - k) for i in range(0, 101)
+    possibilities = np.array([[i, j, k, 100 - i - j - k]
+                                                for i in range(0, 101)
                                                 for j in range(0, 101 - i)
-                                                for k in range(0, 101 - i - j)]
+                                                for k in range(0, 101 - i - j)])
 
     properties = np.transpose(np.array([    [2, 0, -2, 0, 3],
                                             [0, 5, -3, 0, 3],
@@ -27,4 +28,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
     
